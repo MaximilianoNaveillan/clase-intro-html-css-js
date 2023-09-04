@@ -1,0 +1,14 @@
+.myli {
+  /* select class */
+  background-color: bisque;
+  color: red;
+}
+header {
+  /* select elemento*/
+  color: blue;
+  background-color: red;
+}
+#article-1 {
+  /*select id*/
+  background-color: aquamarine;
+}

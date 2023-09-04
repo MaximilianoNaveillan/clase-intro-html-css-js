@@ -1,47 +1,55 @@
 <!DOCTYPE html>
-<!-- ALT + SHIF + A  "crea comentario" -->
-<!-- le indica al navegador que el contenido es HTML 5 -->
+<!-- ALT + SHIFT + A "para crear comentario" -->
+<!-- Indica al navegador que el contenido es HTML5 -->
 <html lang="es">
-  <!-- todo documento tiene una etiqueta html y esta es la madre de todas las etiquetas -->
+  <!-- Todo documento tiene una etiqueta html y esta es la madre de todas las etiquetas -->
   <head>
     <meta charset="UTF-8" />
-    <!-- aporta meta información del contenido del documento, solo tiene una apertura y no un cierre -->
+    <!-- Aporta meta información sobre el contenido del documento; solo tiene una apertura y no un cierre -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Syberpage</title>
   </head>
   <body>
-    <!-- Emmet: es plugin para editores de code, que nos proporcionaran atajos para programar de mejor manera -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Introdución a HTML</a></li>
+        <li><a href="estructura.html">Estructura de un documento HTML</a></li>
+        <li><a href="introcss.html">Introducción a CSS</a></li>
+        <li><a href="introjs.html">Introducción a JS</a></li>
+        <li><a href="introdom.html">Introducción al DOM</a></li>
+      </ul>
+    </nav>
+    <!-- Emmet: es un plugin para editores de código que nos proporciona atajos para programar de mejor manera -->
     <h1>Encabezado principal</h1>
-    <!-- Encabezado: emplementa 6 niveles de impportancia desde <h1>, el mas importante, hasta <h6> el menos importante 
-    NOTA: nunca pero NUNCA lo usen para dar estilos a textos, para esto usaremos CSS    
-    -->
+    <!-- Encabezado: implementa 6 niveles de importancia desde <h1>, el más importante, hasta <h6>, el menos importante. 
+    NOTA: Nunca, pero NUNCA lo uses para dar estilos a textos; para esto usaremos CSS. -->
     <h2>Encabezado 6</h2>
     <h3>Encabezado 5</h3>
     <h4>Encabezado 4</h4>
     <h5>Encabezado 3</h5>
     <h6>Encabezado 6</h6>
     <!-- 
-        CRL+ALT+FLECHA "multiplicar cursor"
-        ALT+MOUSE "multiplicsa cursor"
+        CTRL + ALT + FLECHA "multiplicar cursor"
+        ALT + MOUSE "multiplicar cursor"
      -->
     <hr />
-    <!-- cambio de tema entre párrafos, de forma viusual puede ser reprecentado como una linea horizontal, sin en embargo actualmente no se debería usar para esto -->
+    <!-- Cambio de tema entre párrafos; visualmente puede ser representado como una línea horizontal, sin embargo, actualmente no se debería usar para esto -->
     <h2>Otro tema</h2>
-    <h3>parrafos</h3>
+    <h3>Párrafos</h3>
     <p>
-      <span style="color: blue"> Lorem ipsum dolor </span>
+      <span style="color: blue"> Lorem ipsum dolor</span>
       sit amet consectetur.<br /><br />
-      adipisicing elit. Tempora quidem dignissimos error sunt mollitia dolor,
+      Adipisicing elit. Tempora quidem dignissimos error sunt mollitia dolor,
       aliquid consequuntur porro libero minima dolorem neque quod, rem accusamus
       corrupti, unde natus at voluptatem.
     </p>
     <hr />
-    <h2>link</h2>
-    <h3>ancla</h3>
-    <a target="_self" href="http://www.google.com">google</a><br />
-    <a target="_blank" href="http://www.google.com">google en ventana aparte</a>
+    <h2>Enlace</h2>
+    <h3>Ancla</h3>
+    <a target="_self" href="http://www.google.com">Google</a><br />
+    <a target="_blank" href="http://www.google.com">Google en ventana aparte</a>
     <!-- Ancla: crea enlaces.
-    su atributo target por defecto es "_self" ( target _top y _parent se encuentran en desuso )  -->
+    Su atributo target por defecto es "_self" (target _top y _parent se encuentran en desuso) -->
     <hr />
     <h2>Formulario 🤣🤣</h2>
     <form action="/form" method="GET">
@@ -51,45 +59,95 @@
         id="nombre"
         name="nombres"
         value="max"
-        placeholder="indica tu nombre"
+        placeholder="Indica tu nombre"
         required
       />
       <br /><br />
       <label for="edad">Edad</label><br />
-      <input type="number" id="edad" name="edad" placeholder="indica edad" />
+      <input type="number" id="edad" name="edad" placeholder="Indica edad" />
       <br /><br />
       <label for="email">E-mail</label><br />
       <input
         type="email"
         id="email"
         name="email"
-        placeholder="indica tu E-mail"
+        placeholder="Indica tu E-mail"
         required
       />
       <br /><br />
-      <label for="password">Password</label><br />
+      <label for="password">Contraseña</label><br />
       <input
         type="password"
         id="password"
         name="password"
-        placeholder="password"
+        placeholder="Contraseña"
         required
       />
       <br /><br />
-      <label for="texto">Textoñ</label><br />
+      <label for="texto">Texto</label><br />
       <textarea
         name="texto"
         id="texto"
         cols="30"
         rows="10"
-        placeholder="ingresa tu comentario"
+        placeholder="Ingresa tu comentario"
       ></textarea>
       <hr />
-      <input type="submit" value="guardar" />
+      <input type="submit" value="Guardar" />
     </form>
     <hr />
     <h2>Imagen</h2>
     <img src="public/cyberpunk.gif" alt="cyberpunk-1" width="200" />
     <hr />
+    <h2>Listados</h2>
+    <ul>
+      <!-- desordenado -->
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+    </ul>
+    <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>
+        <ul>
+          <li style="list-style: lower-roman">sub item 1</li>
+          <li style="list-style: lower-roman">sub item 2</li>
+          <li style="list-style: lower-roman">sub item 3</li>
+        </ul>
+      </li>
+    </ol>
+    <hr />
+    <h2>Tabla</h2>
+    <table style="border: solid 1px black">
+      <thead>
+        <!-- Cabezera -->
+        <tr>
+          <th style="border: 1px solid black; padding: 5px">Implate</th>
+          <th style="border: 1px solid black; padding: 5px">Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Cuerpo -->
+        <tr>
+          <td style="border: 1px solid black; padding: 5px">Ojo laser</td>
+          <td style="border: 1px solid black; padding: 5px">500000</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black; padding: 5px">mano robótica</td>
+          <td style="border: 1px solid black; padding: 5px">830000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <!-- footer -->
+        <tr>
+          <td>Total</td>
+          <td>1330000</td>
+        </tr>
+      </tfoot>
+    </table>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </body>
 </html>
