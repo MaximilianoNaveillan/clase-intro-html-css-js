@@ -263,15 +263,84 @@ afectara no solo a si mismo, tambien afectara a lo que contiene
 Es un sistema de elementos flexibles. Donde los elementosHTML se adaptan y colocan automaticamanete siendo mas facil personalizarlos
  */
 
+/* 
+ 1 - flex-direction : define en que dirección se distribuiran los elementos dentro del contenedor
+ - column
+ - column-reverse
+ - row
+ - row-reverse
+
+ 2- flex-wrap: define si que los elementos dentro del contenedor puedan saltar a la siguiente fila o columna
+ - wrap
+ - nowrap
+
+ 3- fex-flow : Es una combinacion de las propiedades flex-directio y flex-wrap
+
+ 4- justify-conetnt : para alinear el contenido
+ - star
+ - center
+ - end
+ - flex-start
+ - flex-center
+ - flex-end
+
+ 5- align-items : se usa para alinear en vertical los elementos dentro del contenedor
+ - center
+ - start
+ - end
+ - stretch
+ - baseline
+
+ 6 - Align-content para alinear las filas::after
+
+ - space-between
+ - space-arround
+ - strech
+ - center
+ - flex-start
+ - flex-end
+
+
+  */
+
 .flex-container {
   display: flex;
-  font-size: 20px;
+  /* flex-direction: row; */ /* column, roww, reverse, column-reverse, row-reverse */
+  flex-wrap: wrap; /* nowrap,wrap, wrap-reverse */
+  /*  flex-flow: row wrap; */ /* Es una combinacion de las propiedades flex-directio y flex-wrap */
+  /* justify-content: end; */
+  /*  align-items: end; */
+  align-content: space-around;
+  font-size: 30px;
   border: 1px solid black;
   padding: 10px;
+
+  height: 300px;
 }
 /* Flex Item */
 .flex-container > div {
-  margin: 10px;
+  /* margin: 10px; */
   background-color: #007fff;
   padding: 20px;
+  width: 100px;
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+}
+
+.contenedor-perfecto {
+  display: flex;
+  background-color: #ddd;
+  height: 40vh;
+  width: 40vw;
+  justify-content: center;
+  align-items: center;
+}
+.contenido-perfecto {
+  display: flex;
+  background-color: #00ff00;
+  height: 100px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
 }
