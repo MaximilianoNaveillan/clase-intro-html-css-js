@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- Estilos con archivos externos -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Estilos embebidos -->
+    <style>
+      .div-ejemplo-embebido {
+        color: red;
+      }
+    </style>
     <header>
       <nav>
         <ul>
@@ -18,5 +25,95 @@
         </ul>
       </nav>
     </header>
+    <main>
+      <section>
+        <!-- Content-box -->
+        <article class="content-content-box"><div></div></article>
+        <article>
+          <p>holi</p>
+          <p class="myp back">Holi 1</p>
+          <p class="myp">Holi 2</p>
+          <p id="myp" class="myp">Holi 3</p>
+          <p class="myp color-rojo-back-azul">p con dos class</p>
+        </article>
+      </section>
+      <section>
+        <article>
+          <!-- Estilo en línea -->
+          <div class="div-ejemplo-embebido" style="background-color: blue">
+            holi
+          </div>
+        </article>
+        <!-- ELJEMPLO DE MODELO DE CAJA -->
+        <article>
+          <div class="contenedor">
+            <div class="contenido">Holi</div>
+          </div>
+        </article>
+        <!-- Ejemplo modelo caja con imagen -->
+        <article>
+          <div class="contenedor-con-imagen">
+            <div class="contenido-con-imagen">Holi</div>
+          </div>
+        </article>
+        <!-- Selectores -->
+        <article class="content-contenedor-parrafo">
+          <div class="contenedor-parrafo">
+            <h1>este es el título de el párrafo</h1>
+            <p>Este es un <span> párrafo</span></p>
+          </div>
+        </article>
+      </section>
+      <section>
+        <h2>Estilos mas usados</h2>
+
+        <article>
+          <div class="container">
+            <div class="content">
+              <p>Párrafo</p>
+              <h3>Este es un detalle</h3>
+              <div class="mydiv">
+                <div class="div-in-mydiv"></div>
+                <div class="div-in-mydiv-2"></div>
+                <div class="div-in-mydiv-3"></div>
+              </div>
+              <div class="tamano">
+                <div class="tamano-hijo">sss</div>
+              </div>
+              <div class="div-vh-vw">100vh-100vw</div>
+              <div class="punto">100 pt</div>
+              <div class="div-rem">20 rem</div>
+              <div class="div-em">20 em</div>
+              <div class="_contenedor">
+                contenedor
+                <div class="_contenido">
+                  contenido
+                  <div class="_otrocontenido">otro contenido</div>
+                  <div class="contenido-grande">contenido muy grande</div>
+                </div>
+              </div>
+              <div class="contenedor-de-bordes">
+                <div class="borde-1"></div>
+                <div class="borde-2"></div>
+                <div class="borde-3"></div>
+                <div class="borde-4"></div>
+              </div>
+              <div class="borde-en-una-linea"></div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section>
+        <article class="content-d-flex">
+          <h2>Display Flex</h2>
+          <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer></footer>
   </body>
 </html>

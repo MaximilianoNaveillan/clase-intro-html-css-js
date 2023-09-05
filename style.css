@@ -1,14 +1,277 @@
+/* selector global */
+* {
+  box-sizing: content-box;
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
 .myli {
   /* select class */
   background-color: bisque;
   color: red;
 }
+
 header {
   /* select elemento*/
   color: blue;
   background-color: red;
 }
+.content-content-box > div {
+  background-color: green;
+  width: 300px;
+  height: 10px;
+  margin: 30px;
+  border: 10px solid black;
+}
+
 #article-1 {
   /*select id*/
   background-color: aquamarine;
+}
+
+#myp {
+  color: blue;
+}
+
+.myp {
+  font-size: 24px;
+}
+
+.back {
+  background-color: brown;
+}
+
+.color-rojo-back-azul {
+  color: blueviolet;
+  background-color: blue;
+}
+
+/* MODELO DE CAJA */
+
+.contenedor {
+  margin: 50px;
+  background-color: violet;
+  padding: 10px;
+  border: 5px solid red;
+  color: green;
+}
+
+.contenido {
+  background-color: aquamarine;
+}
+
+.contenedor-con-imagen {
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  background-color: aqua;
+  background-image: url("public/cyberpunk.gif");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.contenido-con-imagen {
+  background-color: white;
+}
+/* selectores */
+
+/* selector pór elemento */
+span {
+  font-weight: bold;
+}
+/*  Asigan los mismos estílos a elementos con nombres diferentes, esta regla afecta a todos los elementos <p> y <span> */
+p,
+span {
+  color: blueviolet;
+}
+/*  Afecta solo a los elementos <p> que se encuentran dentro de la etiqueta <main>, ya sea contenido directo o inderecto */
+main p {
+  background-color: aquamarine;
+}
+/*  Usa el caracter > para referenciar a un elemento que es hijp directo .contenedor .parrafo */
+
+.contenedor-parrafo > p {
+  font-size: 35px;
+}
+/* 
+Este selector hace referencia a un elemento que está
+precedido por otro elemento; ambos deben compartir el
+mismo elemento padre. Afecta a todos los elementos <p>
+que se ubican inmediatamente después de un elemento
+<h1>.
+ */
+
+h1 + p {
+  color: red;
+}
+
+/* Estilos mas usados */
+/* 
+Declara el tipo de letra que se usa para mostrar en un texto. Se pueden declarar múltiples valores separados por coma prara ofrecer al navegador varias alternativas en caso de que alguna no se encuebtre disponible
+ */
+.container {
+  border-top: 1px solid black;
+  padding: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
+}
+.container > .content > p {
+  background-color: white;
+  color: black;
+  font-size: 25px; /* Determina el tamaño de la fuente; puede estar incluido en px, pt, %, rem, em*/
+  font-weight: 100 /* bold (desde 100 hasta 1000) */;
+  font-style: oblique; /* normal, italic, oblique */
+}
+
+.content > h3 {
+  background-color: bisque;
+  font: bold 30px Arial, sans-serif; /* Permite declarar varios atributos al mismo tiempo, separados por espacios. 1° grosor 2°tamaño 3° familia de fuente */
+  text-align: center; /* left, right, center, justify */
+  line-height: 60px; /* Define el espacio entre lineas */
+}
+
+/* colores */
+
+.mydiv {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: rgb(255, 380, 100);
+  background-image: url("public/cyberpunk.gif");
+}
+.div-in-mydiv {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.div-in-mydiv-2 {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  background-color: #ff0000; /* 0 - 9 y A F  */
+}
+
+.content {
+  font-size: 30px;
+}
+
+/* Tamaños */
+.div-in-mydiv-3 {
+  height: 50px;
+  width: 50px;
+  margin: 20px 0;
+  border: 1px solid black;
+  background-color: #00ff00; /* 0 - 9 y A F  */
+}
+.tamano {
+  margin: 100px 20px;
+  height: 200px;
+  width: 200px;
+  background-color: black;
+}
+
+.tamano-hijo {
+  height: 25%;
+  width: 25%;
+  background-color: red;
+}
+.div-vh-vw {
+  height: 100vh;
+  width: calc(100vw - 40px); /* calculo con CSS */
+  background-color: blue;
+}
+
+.punto {
+  height: 100pt;
+  width: 100pt;
+  background-color: red;
+}
+.div-rem {
+  height: 20rem; /* relación al la fuente de todo el html (Documento) */
+  width: 20rem;
+  background-color: #00ff00;
+}
+.div-em {
+  height: 20em; /* relación al la fuente del contenedor */
+  width: 20em;
+  background-color: blue;
+}
+
+._contenedor {
+  background-color: red;
+  width: 500px;
+  height: 500px;
+}
+._contenido {
+  background-color: green;
+  width: 200px;
+  height: 200px;
+  max-height: 200px; /* El maximo de alto  */
+  max-width: 200px; /* El maximio de ancho */
+  overflow-x: auto; /* scroll, hidden, auto */
+  overflow-y: hidden;
+}
+._otrocontenido {
+  background-color: blue;
+  width: 150px;
+  height: 150px;
+}
+
+.contenido-grande {
+  height: 400px;
+  width: 400px;
+  background-color: chocolate;
+}
+
+.contenedor-de-bordes > div {
+  height: 100px;
+  width: 100px;
+  border-width: 5px;
+  border-style: dotted;
+  border-color: #00ff00;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.borde-1 {
+  border-style: dashed !important;
+}
+.borde-2 {
+  border-style: double !important;
+}
+.borde-3 {
+  border-style: outset !important;
+}
+.borde-4 {
+  border-style: solid !important;
+}
+.borde-en-una-linea {
+  border: 1px solid red; /* 1° tamaño de linea (border-with), 2° Estilo de borde, 3° color */
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+  margin-top: 20px;
+}
+/* 
+Flex container
+afectara no solo a si mismo, tambien afectara a lo que contiene
+
+Es un sistema de elementos flexibles. Donde los elementosHTML se adaptan y colocan automaticamanete siendo mas facil personalizarlos
+ */
+
+.flex-container {
+  display: flex;
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 10px;
+}
+/* Flex Item */
+.flex-container > div {
+  margin: 10px;
+  background-color: #007fff;
+  padding: 20px;
 }
