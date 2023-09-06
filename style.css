@@ -424,3 +424,81 @@ Determina una longitud especifica
 .flex-container-3 > div:nth-child(3) {
   flex-basis: 200px;
 }
+
+/* 
+Display Grid nos permitira disponer elementos en 2 dimenciones a diferencia de Flex que nos ayuda a disponer elementos solo en un a dimención
+ */
+
+.container-grid {
+  display: grid;
+}
+.item {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  border: 1px solid #a0b7ff;
+}
+
+.grid-columns {
+  grid-template-columns: repeat(3, 1fr);
+  /* fr fr fr, repeat(cantidad, u.medida) */
+}
+
+.grid-rows {
+  grid-template-rows: 1fr 50% 1fr;
+}
+.grid-rows-columns {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; /* repeat(3, 1fr) */
+}
+
+.primero {
+  grid-column-start: 1; /* desde donde comienza */
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.estructura {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas:
+    "_header _header"
+    "_sidelbar _main "
+    "_footer _footer ";
+  grid-template-rows: 80px 1fr 80px;
+  grid-template-columns: 200px 1fr;
+}
+
+._header {
+  grid-area: _header;
+  background-color: #00ff00;
+}
+._sidelbar {
+  grid-area: _sidelbar;
+  background-color: #9233a9;
+}
+._main {
+  grid-area: _main;
+  background-color: #a0b7ff;
+}
+._footer {
+  grid-area: _footer;
+  background-color: aqua;
+}
+
+.responsivo {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 200px));
+  grid-template-rows: repeat(1, minmax(100px, 200px));
+  border: 1px solid #007fff;
+  padding: 15px;
+  gap: 15px;
+}
+.responsivo > div {
+  background-color: #007fff;
+  color: #fff;
+  padding: 30px;
+}
